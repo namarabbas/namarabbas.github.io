@@ -15,10 +15,10 @@ const ServiceCard = ({index, title, icon}) => {
             >
                 <div
                     option={{max: 45, scale: 1, speed: 450}}
-                    className={"bg-white rounded-[20px] py-5 px-12 min-h-[280px] flex justify-evenly items-center flex-col hover:shadow-md transition-shadow duration-400"}
+                    className={"bg-white rounded-[20px] py-5 px-6 sm:px-12 min-h-[220px] sm:min-h-[280px] flex justify-evenly items-center flex-col hover:shadow-md transition-shadow duration-400"}
                 >
-                    <img src={icon} alt={title} className={"w-16 h-16 object-contain"}/>
-                    <h3 className={"text-[#1E293B] text-[20px] font-bold text-center"}>{title}</h3>
+                    <img src={icon} alt={title} className={"w-12 h-12 sm:w-16 sm:h-16 object-contain"}/>
+                    <h3 className={"text-[#1E293B] text-[16px] sm:text-[20px] font-bold text-center"}>{title}</h3>
                 </div>
             </motion.div>
         </Tilt>);
@@ -32,7 +32,7 @@ const About = () => {
             </motion.div>
             <motion.p
                 variants={fadeIn("", "", 0.1, 1)}
-                className={"mt-4 text-[#64748B] text-[17px] max-w-3xl leading-[30px]"}
+                className={"mt-4 text-[#64748B] text-[15px] sm:text-[17px] max-w-3xl leading-[26px] sm:leading-[30px]"}
             >
                 I'm a highly effective Technical Project Manager with 4+ years of experience
                 leading cross-functional teams and driving product delivery for US-based clients.
@@ -41,7 +41,7 @@ const About = () => {
                 projects to scaling entrepreneurial ventures, I bring a unique blend of technical
                 understanding, strategic thinking, and people leadership to every engagement.
             </motion.p>
-            <div className={"mt-20 flex flex-wrap gap-10"}>
+            <div className={"mt-10 sm:mt-20 flex flex-wrap gap-6 sm:gap-10"}>
                 {services.map((service, index) => {
                     return (<ServiceCard key={service.title} index={index} {...service}/>)
                 })}
