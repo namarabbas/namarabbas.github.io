@@ -19,11 +19,11 @@ const Contact = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
         setLoading(true);
-        emailjs.send("service_kfy6s4m", "template_zu7gxsl", {
+        emailjs.send("service_n2me3bb", "template_igdd4hc", {
             from_name: form.name, to_name: "Namar Abbas",
             from_email: form.email, to_email: "namarabbas57@gmail.com",
             message: form.message,
-        }, "aFCNmuREqibzGvgcg").then(() => {
+        }, "xVpFrmgdAnWYTzeos").then(() => {
             setLoading(false);
             alert("Thank you. I will get back to you as soon as possible.");
             setForm({name: "", email: "", message: ""});
